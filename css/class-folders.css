@@ -1,0 +1,87 @@
+/* this style sheet is specific to the about-us page */
+
+
+
+main {
+    font-size: medium;
+}
+
+
+
+
+body {
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh; /* this allows the background image to cover the entire height of the viewport */
+}
+
+
+
+/* Desktop (where the nav icons resides) */
+#desktop {
+    padding: .5% 2% .5% 2%;
+}
+
+#desktop-left{ /* About Us, Reviews, Services, Glossary */
+    float: left;
+}
+
+#desktop ul { /* list holding the desktop icons */
+    padding: 0%;
+    list-style-type: none;
+    font-size: smaller;
+    line-height: 110%;
+}
+   
+
+.icon { /* each list item contains an icon and label */
+    margin-bottom: 1em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.icon a:hover { /* each icon image is a link to its respective page, when hovering over the image, a shadowed box should appear */
+    display: block;
+    background-color: #00000015;
+    box-shadow: inset .35em .35em #0000001b;
+}
+
+.icon-img { /* the icon images have padding to build the hover box, and to give it a more centered appearance */
+    width: 3em;
+    padding: 1em .5em .25em 1em;
+}
+
+
+
+/* Welcome Box (where the middle box containing contact and inquiry info resides) */
+#box {
+    width: 30em;
+    background-color: #fff3d8;
+    float: right;
+    margin-right: 3em;
+    margin-top: 2em;
+    padding: .85em;
+    border: .125em solid black;
+    box-shadow: .35em .35em #00000044;
+}
+
+
+#segment-2 { /* where the "contact or visit us..." message resides */
+    font-weight: 600;
+    font-size: 1.11em; /* this is so that the font-size exactly allows the text to be the width of the welcome box without wrapping. I could not figure out another way to do this */
+    margin-bottom: 1%;
+}
+
+
+.subsegment { /* this affects both the contact and visitng info boxes */
+    flex: 1; /* this alows the info boxes to stretch across the welcome box, and do so equally */
+    border: .125em solid black;
+    box-shadow: inset .35em .35em #00000044;
+    padding: 3% 4% 2% 4%; /* padding is altered to appear more centered due to the shadows */
+}
+
+.switchable-text { /* I included other versions of the visiting info text, as when the layout changes for a narrower viewport, the spacing is different */
+    display: none; /* this allows only the original text to show */
+}
