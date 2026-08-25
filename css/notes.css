@@ -1,0 +1,104 @@
+/* this style sheet is specific to the about-us page */
+
+main {
+    font-size: medium;
+    margin: 2.75% 3%;
+}
+
+p + p { /* this allows there to be margin between the paragraphs without affecting the first paragraph */
+    margin-top: .5em;
+}
+
+p + ul {
+    margin-top: .325em;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.5em;
+    text-transform:uppercase;
+    margin-bottom: -.5em;
+}
+
+h2 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    margin-bottom: -.5em;
+    margin-top: 1.5em;
+}
+
+h3 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: bolder;
+    font-size: 1.125em;
+    margin-bottom: .25em;
+}
+
+p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+ul {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  list-style: none; /* Removes default bullet */
+  list-style-position: inside;
+  padding-left: 1.25em;
+  text-indent: -1.25em;
+}
+
+ul li + li {
+    margin-top: .35em;
+}
+
+ul li::before {
+  font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
+  content: "\2B50"; /* Your custom symbol or character */
+  padding-right: .5em;
+  filter: brightness(0); /* Completely turns the color emoji black */
+  font-size: .625em;
+  vertical-align: 0.25em;
+
+
+
+}
+
+ul ul li::before {
+  content: "\2796"; /* Your custom symbol or character */
+  padding-right: .5em;
+}
+
+ul ul ul li::before {
+  content: "\2796"; /* Your custom symbol or character */
+  padding-right: .5em;
+  filter: none;
+}
+
+ol li:not(.button) {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-indent: -2em;
+    padding-left: .75em;
+}
+
+ol {
+  list-style-type: none; /* Hide standard numbering */
+  counter-reset: section; /* Create/Reset a counter named 'section' */
+  padding-left: 20px;    /* Maintain standard list indentation */
+}
+
+/* 2. Increment the counter and style the pseudo-element */
+ol > li:not(.button) {
+  counter-increment: section; /* Increment the 'section' counter by 1 */
+  position: relative;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/* 3. Display the hierarchical numbering before the text */
+ol > li:not(.button)::before {
+  /* 'counters()' automatically adds parent numbers separated by a dot */
+  content: counters(section, ".") ". "; 
+  font-weight: bold; /* Optional: Makes the numbers pop */
+}
