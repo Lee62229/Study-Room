@@ -13,33 +13,54 @@ p + ul {
     margin-top: .325em;
 }
 
+p + ol {
+    margin-top: .325em;
+}
+
 h1 {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bolder;
     font-size: 1.5em;
     text-transform:uppercase;
     margin-bottom: -.5em;
+    margin-top: 1.25em;
 }
 
 h2 {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bolder;
-    font-size: 1.25em;
+    font-size: 1.15em;
     text-transform: uppercase;
-    margin-bottom: -.5em;
-    margin-top: 1.5em;
+    margin-bottom: .05em;
+    margin-top: 1em;
+}
+
+h2 + ul {
+    margin-top: .325em;
+}
+
+h2 + ol {
+    margin-top: .325em;
 }
 
 h3 {
     font-family: Helvetica, Arial, sans-serif;
     font-weight: bolder;
-    font-size: 1.125em;
-    margin-bottom: .25em;
+    font-size: 1em;
+    margin-bottom: .05em;
 }
 
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+h3 + ul {
+    margin-top: .325em;
+}
+
+h3 + ol {
+    margin-top: .325em;
 }
 
 ul {
@@ -53,6 +74,11 @@ ul {
 ul li + li {
     margin-top: .35em;
 }
+
+#positives {
+  margin-top: -.1em;
+}
+
 
 ul li::before {
   font-family: "Segoe UI Emoji", "Segoe UI Symbol", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
@@ -68,13 +94,27 @@ ul li::before {
 
 ul ul li::before {
   content: "\2796"; /* Your custom symbol or character */
-  padding-right: .5em;
+  padding-right: .75em;
 }
 
 ul ul ul li::before {
   content: "\2796"; /* Your custom symbol or character */
-  padding-right: .5em;
+  padding-right: .75em;
   filter: none;
+}
+
+ul ul ul ul li::before {
+  content: "— "; /* Your custom symbol or character */
+  padding-right: .75em;
+  filter: none;
+}
+
+#positives::before {
+  content: "+ "; /* Your custom symbol or character */
+  font-size: 1.25em;
+  padding-right: .025em;
+  filter: none;
+  vertical-align: -.025em;
 }
 
 ol li:not(.button) {
@@ -93,7 +133,6 @@ ol {
 ol > li:not(.button) {
   counter-increment: section; /* Increment the 'section' counter by 1 */
   position: relative;
-    font-family: Helvetica, Arial, sans-serif;
 }
 
 /* 3. Display the hierarchical numbering before the text */
@@ -101,4 +140,9 @@ ol > li:not(.button)::before {
   /* 'counters()' automatically adds parent numbers separated by a dot */
   content: counters(section, ".") ". "; 
   font-weight: bold; /* Optional: Makes the numbers pop */
+}
+
+ol li::before {
+    font-family: Helvetica, Arial, sans-serif;
+
 }
