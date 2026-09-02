@@ -5,6 +5,16 @@ main {
     margin: 2.75% 3%;
 }
 
+img {
+    height: 25em;
+    width: auto;
+}
+
+a {
+    color: black;
+    text-decoration-line: none;
+}
+
 p + p { /* this allows there to be margin between the paragraphs without affecting the first paragraph */
     margin-top: .5em;
 }
@@ -24,6 +34,10 @@ h1 {
     text-transform:uppercase;
     margin-bottom: -.5em;
     margin-top: 1.25em;
+}
+
+h1 + p {
+    margin-top: 1em;
 }
 
 h2 {
