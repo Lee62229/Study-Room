@@ -5,8 +5,28 @@ main {
     margin: 2.75% 3%;
 }
 
-img {
+#tiny {
+    height: 30em;
+    width: auto;
+}
+
+#small {
     height: 25em;
+    width: auto;
+}
+
+#medium {
+    height: 20em;
+    width: auto;
+}
+
+#large {
+    height: 15em;
+    width: auto;
+}
+
+#jumbo {
+    height: 10em;
     width: auto;
 }
 
