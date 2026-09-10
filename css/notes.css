@@ -91,7 +91,11 @@ h3 {
 
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
+}
 
+blockquote {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
 }
 
 h3 + ul {
